@@ -1,0 +1,13 @@
+.temp-billboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+}
+
+#search-input {
+    font-size: larger;
+}
