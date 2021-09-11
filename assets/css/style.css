@@ -32,11 +32,11 @@ nav ul li {
 nav ul li a{
     position:relative;
     z-index: 1;
-    border: solid white;
+    border: dotted white;
     padding: .5rem 1rem .5rem 1rem;
 }
 nav ul li a:hover{
-    color: white;
+    color: black;
     text-decoration: none;
 }
 nav ul li a:after{
@@ -51,8 +51,7 @@ nav ul li a:after{
     height: 1px;
     content: '.';
     color: transparent;
-    background-color: #0cbaba;
-    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+    background-color: white;
     visibility: none;
     opacity: 0;
     z-index: -1;
@@ -113,7 +112,8 @@ h1 {
   width: 100%;
   height: 900px;
   background: rgb(50, 50, 50);
-  background: url(https://doninmass.files.wordpress.com/2013/04/walking-in-rain-painting-wallpaper-hd.jpg) no-repeat 50% 50% fixed;
+  background: 	linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+  url(https://doninmass.files.wordpress.com/2013/04/walking-in-rain-painting-wallpaper-hd.jpg) no-repeat 50% 50% fixed;
   background-size: 130%;
   overflow: hidden;
 }
@@ -126,4 +126,8 @@ h1 {
   padding: .3em;
   font-size: 3em;
   font-weight: lighter;
+}
+
+.content-wrapper{
+    margin-top: 1rem;
 }
