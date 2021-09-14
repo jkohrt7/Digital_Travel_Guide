@@ -2,4 +2,4 @@
 
 This is just to test merging.
 
-Here is another test.
+This is a really cool README!
