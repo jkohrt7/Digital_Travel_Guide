@@ -49,4 +49,5 @@ let getWeatherData = function(cityName) {
         console.log("Error: Problem with API call--invalid city name.");
         return error;
     }) 
+
 }
