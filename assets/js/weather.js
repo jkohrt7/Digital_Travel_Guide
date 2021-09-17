@@ -45,31 +45,8 @@ let getWeatherData = function(cityName) {
         let dataPromise = weatherResponse.json();
         return dataPromise;
       });
-    })
-    .catch((error) => {
+    }).catch((error) => {
       console.log("Error: Problem with API call--invalid city name.");
       return error;
     });
 };
-
-let getWeatherData = function (cityName) {
-  //use the city's name to create a GET http request for the geo API endpoint
-  let requestUrl =
-    "https://api.openweathermap.org/geo/1.0/direct?q=" +
-    cityName +
-    "&appid=acdc16ce9b81fc931de962a6dfeeba4f"; //api key
-
-  //Use geo API endpoint to return the city coordinates
-  return fetch(requestUrl, {
-    method: "GET",
-    mode: "cors",
-  })
-    .then(function (response) {
-      let dataPromise = response.json();
-      return dataPromise;
-    })
-    .then(function (coordinatesResponse) {
-      //Use the promised lat and lon city values to create an API call to the onecall API endpoint
-      if (coordinatesResponse.length == 0) {
-        throw new Error();
-      }
