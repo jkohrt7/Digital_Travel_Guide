@@ -20,29 +20,7 @@ function getWikiPromise(articleName){
     })
 }
 
-/**
- * TODO:
- * @function getAvgTempWiki : Returns a promise to the array of avg monthly temps for a city using
- * the wikipedia API.
- * @param {String} city : The city whose monthy temps (F) will be retrieved
- * @returns A Promise to an array containing average monthly temperatures
- */
-
-function getAvgTempWiki(city) {
-    //get sections of the article
-    let url = "https://en.wikipedia.org/w/api.php?origin=*&action=parse&page=" 
-    + "List_of_cities_by_average_temperature" 
-    + "&format=json"
-
-    getWikiPromise(url).then((data) => {
-        //parse the html to find all the necessary 
-        console.log(data);
-    })
-
-}
-
-// Stack%20Overflow
-
+//returns a promise to the summary (a String) of a wikipedia page.
 function getWikiPageSummary(articleName) {
     let url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&origin=*&titles="
     + articleName.trim().replace(" ", "_");
@@ -50,15 +28,26 @@ function getWikiPageSummary(articleName) {
     return fetch(url, {
         method: "GET",
         mode: "cors"
-    }).then(function(resp) {
+    })
+    .then(function(resp) {
         let dataPromise = resp.json();
         return dataPromise;
-    }).catch((error) => {
+    })
+    .then(function(data) {
+        let summaryObj = data.query.pages;
+        let pageid = Object.keys(summaryObj)[0];
+        let summaryString = summaryObj[pageid].extract;
+        return summaryString;
+    })   
+    .catch((error) => {
         return error;
     })
 }
 
-//renders results of a wikipedia search
-const buildWikipediaElement = function() {
-        
+//TODO: renders results of a wikipedia search to a flexbox
+function buildWikipediaElement (articleName) {
+    getWikiPageSummary(articleName).then(function (response) {
+        //create a <p> element with .innerText = response and append it to the page
+
+    })
 }
