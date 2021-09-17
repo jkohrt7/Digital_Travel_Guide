@@ -1,0 +1,18 @@
+.nav-wrapper{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 47rem;
+    width: 16rem;
+    height: 2.1rem;
+    margin: auto;
+    
+}
+.nav-search{
+    position: absolute;
+    top: -200%;
+    left: 15rem;
+    width: 32rem;
+    z-index: 999;
+
+}
