@@ -5,9 +5,15 @@ body {
   background: black;
   color: white;
 }
+main{
+  display: flex;
+  align-items: center;
+}
 
 nav {
   position: fixed;
+  background-color: transparent;
+  box-shadow: none;
   z-index: 9999;
   top: 0;
   left: 0;
@@ -19,20 +25,20 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: .2em 2em;
-  float: right;
+  float: left;
 }
 
 nav ul li {
-  display: inline-flex;
-  text-align: center;
-  margin: 0;
-  padding: .2rem .7rem;
+  border: dotted white;
+  margin: .5rem 1rem 0 1rem;
+
 }
 nav ul li a{
     position:relative;
     z-index: 1;
-    border: dotted white;
-    padding: .5rem 1rem .5rem 1rem;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 6rem;
 }
 nav ul li a:hover{
     color: black;
@@ -82,16 +88,16 @@ nav a {
   content: '';
   position: absolute;
   display: block;
-  top: -200%;
+  top: -225%;
   width: 100%;
-  height: 200%;
+  height: 225%;
   z-index: -1;
   background: rgb(50, 50, 50);
-  transition: .45s ease-in-out;
+  transition: .35s ease-in-out;
 }
 
 .bg-hidden {
-  top: -200%;
+  top: -225%;
   opacity: 0;
 }
 
@@ -107,11 +113,15 @@ h1 {
 }
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
   position: relative;
   width: 100%;
-  height: 900px;
+  height: 100vh;
   background: rgb(50, 50, 50);
-  background: 	linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+  background: 	linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
   url(https://doninmass.files.wordpress.com/2013/04/walking-in-rain-painting-wallpaper-hd.jpg) no-repeat 50% 50% fixed;
   background-size: 130%;
   overflow: hidden;
@@ -119,14 +129,58 @@ h1 {
 
 .hero h1 {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 0;
   width: 100%;
   padding: .3em;
-  font-size: 3em;
-  font-weight: lighter;
-}
 
+}
 .content-wrapper{
-    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem 2rem 1rem 2rem;
+}
+.content-wrapper p{
+    width: 45%;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+.footHeader{
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+.footerList{
+  display: inline-flex;
+  align-items: center;
+
+}
+.githubLinks{
+  margin: 2rem 5rem 2rem 5rem;
+  font-size: 1.5rem;
+}
+.weatherSearch{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10rem 0 10rem 0;
+  height: 60rem;
+  width: 35%;
+  border: solid red;
+}
+.countryWiki{
+  height: 60rem;
+  margin-left: 5rem;
+  border: solid green;
+  width: 58%;
+  text-align: center;
+}
+footer{
+  display: flex;
+  position: absolute;
+  bottom: -77rem;
+  height: 5rem;
+  width: 100%;
+  justify-content: center;
+  background: rgb(50, 50, 50);
 }

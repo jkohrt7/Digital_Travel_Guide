@@ -34,17 +34,17 @@ let getWeatherData = function(cityName) {
         + coordinatesResponse[0].lon
         + "&units=imperial&appid=acdc16ce9b81fc931de962a6dfeeba4f";
 
-        //Use the API to return a Promise of the weather data.
-        return fetch(requestUrl, {
-            method: 'GET',
-            mode: "cors"
-        }).then(function(weatherResponse) {
-            
-            let dataPromise = weatherResponse.json();
-            return dataPromise;
-        })
-    }).catch((error) =>  {
-        console.log("Error: Problem with API call--invalid city name.");
-        return error;
-    }) 
-}
+      //Use the API to return a Promise of the weather data.
+      return fetch(requestUrl, {
+        method: "GET",
+        mode: "cors",
+      }).then(function (weatherResponse) {
+        
+        let dataPromise = weatherResponse.json();
+        return dataPromise;
+      });
+    }).catch((error) => {
+      console.log("Error: Problem with API call--invalid city name.");
+      return error;
+    });
+};
