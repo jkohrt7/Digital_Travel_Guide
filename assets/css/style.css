@@ -87,16 +87,16 @@ nav a {
   content: '';
   position: absolute;
   display: block;
-  top: -200%;
+  top: -225%;
   width: 100%;
-  height: 200%;
+  height: 225%;
   z-index: -1;
   background: rgb(50, 50, 50);
   transition: .35s ease-in-out;
 }
 
 .bg-hidden {
-  top: -200%;
+  top: -225%;
   opacity: 0;
 }
 

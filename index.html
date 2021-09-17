@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap"
@@ -12,6 +13,7 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+    <link rel="stylesheet" href="./assets/css/materialize.css"/>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Travel Guide</title>
   </head>
@@ -19,6 +21,7 @@
     <!--Header will contain title, search bar, and navbar-->
     <header>
     <nav>
+      </div>
         <div class="nav-bg"></div>
         <ul>
           <li><a href="">Link</a></li>
@@ -26,10 +29,26 @@
           <li><a href="">Link</a></li>
           <li><a href="">Link</a></li>
         </ul>
+        <div class="nav-wrapper white nav-search">
+          <form>
+            <div class="input-field">
+              <input placeholder="Search for city" id="search" type="search" required>             
+              <label class="label-icon" for="search"></label>
+            </div>
+          </form>
+        </div>
       </nav>
       <div class="hero">
-        <h1>Travel Guide</h1>
-        <p>Scroll for more information!</p>
+        <h1>Travel Guide</h1> 
+        <div class="nav-wrapper white">
+          <form>
+            <div class="input-field">
+              <input id="search" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </div>
     </header>
     <h1 class="textHeader">Possible Features</h1>
     <div class="content-wrapper">
