@@ -73,3 +73,5 @@ let getWeatherData = function (cityName) {
       if (coordinatesResponse.length == 0) {
         throw new Error();
       }
+    })
+  }
