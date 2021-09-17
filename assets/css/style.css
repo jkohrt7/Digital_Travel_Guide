@@ -112,6 +112,10 @@ h1 {
 }
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -124,20 +128,12 @@ h1 {
 
 .hero h1 {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 0;
   width: 100%;
   padding: .3em;
-  font-size: 4rem;
-  font-weight: lighter;
-}
 
-.hero p{
-    position: absolute;
-    top: 60%;
-    left: 45%;
 }
-
 .content-wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -148,4 +144,23 @@ h1 {
     width: 45%;
     margin: 1rem;
     font-size: 1.5rem;
+}
+.footHeader{
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+.footerList{
+  display: inline-flex;
+  align-items: center;
+
+}
+.githubLinks{
+  margin: 2rem 5rem 2rem 5rem;
+  font-size: 1.5rem;
+}
+footer{
+  display: flex;
+  height: 5rem;
+  justify-content: center;
+  background: rgb(50, 50, 50);
 }
