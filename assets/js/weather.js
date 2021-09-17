@@ -1,5 +1,3 @@
-
-
 /**
  * @function getWeatherData : Uses OpenWeather API to retrieve weather information.
  * See https://openweathermap.org/api/one-call-api for more information on the final result.
