@@ -1,16 +1,8 @@
-.nav-wrapper{
-    display: flex;
-    align-items: center;
-    width: 16rem;
-    height: 2.1rem;
+.dropdown-trigger{
+    position:absolute;
+    bottom: 50%;
     margin: auto;
 }
-
-.nav-search{
-    position: absolute;
-    top: -200%;
-    left: 15rem;
-    width: 32rem;
-    z-index: 999;
-
+.dropdown-content{
+    height: 30rem;
 }
