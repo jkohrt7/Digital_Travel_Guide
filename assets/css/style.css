@@ -5,6 +5,10 @@ body {
   background: black;
   color: white;
 }
+main{
+  display: flex;
+  align-items: center;
+}
 
 nav {
   position: fixed;
@@ -155,9 +159,28 @@ h1 {
   margin: 2rem 5rem 2rem 5rem;
   font-size: 1.5rem;
 }
+.weatherSearch{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10rem 0 10rem 0;
+  height: 60rem;
+  width: 35%;
+  border: solid red;
+}
+.countryWiki{
+  height: 60rem;
+  margin-left: 5rem;
+  border: solid green;
+  width: 58%;
+  text-align: center;
+}
 footer{
   display: flex;
+  position: absolute;
+  bottom: -77rem;
   height: 5rem;
+  width: 100%;
   justify-content: center;
   background: rgb(50, 50, 50);
 }

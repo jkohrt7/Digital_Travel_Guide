@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="./assets/css/materialize.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Travel Guide</title>
+</head>
+<body>
+    <header>
+        <nav>
+          </div>
+            <div class="nav-bg"></div>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a target ="_blank" href="https://github.com/jkohrt7/Team_4_Project">About</a></li>
+            </ul>
+          </nav>
+          </header>
+    <main>
+          <!-- Section for weather search box and data -->
+          <section class = weatherSearch>
+            <h4>Enter a city to get local weather</h4>
+            <form>
+              <div class="row weatherInput">
+                <div class="input-field col s8">
+                  <i class="material-icons prefix">location_city</i>
+                  <input id="icon_prefix" type="text" class="validate">
+                  <label for="icon_prefix">Enter City</label>
+                </div>
+                </div>
+                </form>
+              </section>
+          <!-- Section for display country data from API call -->
+          <section class = countryWiki>
+            <h4>Country Info</h4>
+          </section>
+        </main>
+          <footer>
+            <ul class ="footerList">
+              <li class="footHeader">GitHub Links: </li>
+            <li><a class = "githubLinks" href ="https://github.com/dcorbiniii">Darnley</a></li>
+            <li><a class = "githubLinks" href ="https://github.com/NXTGenforcer">Graham</a></li>
+            <li><a class = "githubLinks" href ="https://github.com/jkohrt7">Jared</a></li>
+            <li><a class = "githubLinks" href ="https://github.com/mandy2324">Mandy</a></li>
+            <li><a class = "githubLinks" href ="https://github.com/McTastic">Sean</a></li>
+          </ul>
+          </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/materialize.js"></script>
+    <script src = "assets/js/weather.js"></script>
+    <script src = "assets/js/wikipedia.js"></script>
+    <script src="assets/js/autocomplete.js"></script>
+</body>
+</html>
