@@ -1,0 +1,9 @@
+.dropdown-trigger{
+    position:absolute;
+    bottom: 50%;
+    margin: auto;
+}
+.dropdown-content{
+    height: 30rem;
+}
+
