@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <link rel="stylesheet" href="./assets/css/materialize.css"/>
+    <link rel="stylesheet" href="assets/css/searchResults.css"/>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Travel Guide</title>
 </head>
@@ -41,10 +42,16 @@
                 </div>
                 </div>
                 </form>
+                <div class="weatherName">City Name</div>
+                <div class="weatherIcon">Weather Icon</div>
+                <div class="weatherDescription">Weather Description</div>
+                <div class="weatherTempHigh">Temp High</div>
+                <div class="weatherTempLow">Temp Low</div>
+                <div class="weatherHumidity">Humidity</div>
               </section>
           <!-- Section for display country data from API call -->
           <section class = countryWiki>
-            <h4>Country Info</h4>
+            <h4 class="countryName">Country Name</h4>
               <!-- Dropdown Trigger -->
           <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
           <!-- Dropdown Structure -->
@@ -294,6 +301,7 @@
   <li><a><option value="Zambia">Zambia</option></a></li>
   <li><a><option value="Zimbabwe">Zimbabwe</option></a></li>
               </ul>
+              <div class ="countryInfo">Info from wiki will populate here</div>
           </section>
         </main>
           <footer>

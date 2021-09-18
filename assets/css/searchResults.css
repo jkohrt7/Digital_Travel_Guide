@@ -1,0 +1,26 @@
+.weatherSearch{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10rem 0 10rem 0;
+    height: 60rem;
+    width: 35%;
+    border: solid red;
+  }
+  .countryWiki{
+    height: 60rem;
+    margin-left: 5rem;
+    border: solid green;
+    width: 58%;
+    text-align: center;
+  }
+  .countryName{
+      border: solid blue;
+      margin: 1em;
+      padding: 1em;
+  }
+  .countryInfo{
+      border: solid yellowgreen;
+      margin: 1em;
+      padding: 1em;
+  }
