@@ -3,6 +3,8 @@
  * @param {String} articleName : A string containing the name of a wikipedia article.
  * @returns {Promise} : Returns a promise from the wikipedia API; use Promise.then() to parse Response.
  */
+ let countryNameEl = $(".countryName");
+ let countryInfoEl = $(".countryInfo");
 
 function getWikiPromise(articleName){
     let url = "https://en.wikipedia.org/w/api.php?origin=*&action=parse&page=" 
@@ -22,9 +24,9 @@ function getWikiPromise(articleName){
 
 //returns a promise to the summary (a String) of a wikipedia page.
 function getWikiPageSummary(articleName) {
+    articleName = localStorage.getItem("Country");
     let url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&origin=*&titles="
-    + articleName.trim().replace(" ", "_");
-
+    + articleName.replace(" ", "_");
     return fetch(url, {
         method: "GET",
         mode: "cors"
@@ -48,6 +50,11 @@ function getWikiPageSummary(articleName) {
 function buildWikipediaElement (articleName) {
     getWikiPageSummary(articleName).then(function (response) {
         //create a <p> element with .innerText = response and append it to the page
-
+        return response;
+    })
+        .then(function(data){
+        console.log(data)
+        countryInfoEl.append("<p>" + data + "</p>")
     })
 }
+buildWikipediaElement();
