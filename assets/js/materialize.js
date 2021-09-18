@@ -14,7 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   $(".dropdown-content").on("click","option",function(){
       event.preventDefault();
+      countryInfoEl.empty();
       var usrSelected = $(this).text();
       localStorage.setItem("Country",usrSelected);
+      buildWikipediaElement();
+      countryNameEl.text(usrSelected);
       console.log(usrSelected);
+    //   buildWikipediaElement();
   })
