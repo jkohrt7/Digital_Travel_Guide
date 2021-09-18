@@ -5,8 +5,8 @@ $(document).ready(function() {
        $('.hero').css('background-size', 130 + parseInt($(window).scrollTop() / 5) + '%');
        $('.hero h1',).css('top', 30 + ($(window).scrollTop() * .1) + '%');
        $('.hero h1',).css('opacity', 1 - ($(window).scrollTop() * .003));
-       $('.dropdown-trigger',).css('top', 50 + ($(window).scrollTop() * .1) + '%');
-       $('.dropdown-trigger',).css('opacity', 1 - ($(window).scrollTop() * .003));
+       $('.waves-effect',).css('top', 50 + ($(window).scrollTop() * .1) + '%');
+       $('.waves-effect',).css('opacity', 1 - ($(window).scrollTop() * .003));
      }
       
       if($(window).scrollTop() >= $('.content-wrapper').offset().top - 400) {

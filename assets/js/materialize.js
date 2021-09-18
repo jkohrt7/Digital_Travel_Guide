@@ -1,3 +1,7 @@
+$(".waves-effect").on("click", function(){
+location.replace("searchResults.html");
+})
+
 document.addEventListener('DOMContentLoaded', function() {
     event.preventDefault();
     var elems = document.querySelector('.dropdown-trigger');
@@ -13,5 +17,4 @@ document.addEventListener('DOMContentLoaded', function() {
       var usrSelected = $(this).text();
       localStorage.setItem("Country",usrSelected);
       console.log(usrSelected);
-      location.replace("searchResults.html");
   })
