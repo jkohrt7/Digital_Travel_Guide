@@ -246,8 +246,8 @@ var countries = {
   ZW: "Zimbabwe",
 };
 
-$(document).ready(function () {
-  $("input.autocomplete").autocomplete({
-    data: { countries },
-  });
-});
+// $(document).ready(function () {
+//   $("input.autocomplete").autocomplete({
+//     data: { countries },
+//   });
+// });
