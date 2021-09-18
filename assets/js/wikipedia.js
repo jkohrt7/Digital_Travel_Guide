@@ -18,7 +18,7 @@ function getWikiPromise(articleName){
     }).catch((error) => {
         return error;
     })
-}
+} 
 
 //returns a promise to the summary (a String) of a wikipedia page.
 function getWikiPageSummary(articleName) {
