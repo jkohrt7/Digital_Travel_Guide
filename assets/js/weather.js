@@ -5,11 +5,19 @@
  * @returns Error : returns an error object if the API call fails.
  * @returns Promise : a Promise that will return as a Response containing a JSON if .then/await is utilized
  */
-let getWeatherData = function(countryCode, cityName) {
+let getWeatherData = function(countryCode, cityName, stateCode) {
     //use the city's name to create a GET http request for the geo API endpoint
-    let requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q="
-        + countryCode + "," + cityName
-        + "&appid=acdc16ce9b81fc931de962a6dfeeba4f" //api key
+    let requestUrl = "";
+    if(stateCode) {
+      requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q="
+      + cityName + "," +  stateCode + "," + countryCode
+      + "&appid=acdc16ce9b81fc931de962a6dfeeba4f" //api key
+    }
+    else {
+      requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q="
+      + cityName + "," + countryCode
+      + "&appid=acdc16ce9b81fc931de962a6dfeeba4f" //api key
+    }
     
     //Use geo API endpoint to return the city coordinates
     return fetch(requestUrl, {
