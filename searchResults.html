@@ -11,6 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <link rel="stylesheet" href="./assets/css/materialize.css"/>
@@ -37,23 +39,29 @@
               <div class="row weatherInput">
                 <div class="input-field col s8">
                   <i class="material-icons prefix">location_city</i>
-                  <input id="icon_prefix" type="text" class="white-text validate">
-                  <label for="icon_prefix">Enter City</label>
+                  <input id="icon_prefix" type="text" class="white-text validate"> 
+                   <button class="btn waves-effect waves-light weatherBtn" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+                  <label for="icon_prefix">Enter City Name</label>
                 </div>
+             
                 </div>
                 </form>
-                <div class="weatherName">City Name</div>
-                <div class="weatherIcon">Weather Icon</div>
-                <div class="weatherDescription">Weather Description</div>
-                <div class="weatherTempHigh">Temp High</div>
-                <div class="weatherTempLow">Temp Low</div>
-                <div class="weatherHumidity">Humidity</div>
+                <div class="weatherName"></div>
+                <div class="weatherIcon"></div>
+                <div class="weatherDescription"></div>
+                <div class="weatherTemp"></div>
+                <div class="weatherHumidity"></div>
               </section>
           <!-- Section for display country data from API call -->
           <section class = countryWiki>
-            <h4 class="countryName">Country Name</h4>
-              <!-- Dropdown Trigger -->
-          <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+            <h4 class="countryName">Select a Country</h4>
+            <div class="countryFlag"></div>
+              <div class ="countryInfo"></div>
+         <!-- Dropdown Trigger -->
+         <div class ="dropdownBtn">
+          <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Coutry List</a>
           <!-- Dropdown Structure -->
           <ul id='dropdown1' class='dropdown-content'>
   <li><a><option value="Afghanistan">Afghanistan</option></a></li>
@@ -301,12 +309,12 @@
   <li><a><option value="Zambia">Zambia</option></a></li>
   <li><a><option value="Zimbabwe">Zimbabwe</option></a></li>
               </ul>
-              <div class ="countryInfo">Info from wiki will populate here</div>
+            </div>
           </section>
         </main>
           <footer>
             <ul class ="footerList">
-              <li class="footHeader">GitHub Links: </li>
+              <li><i class="fab fa-github fa-3x"></i></li>
             <li><a class = "githubLinks" href ="https://github.com/dcorbiniii">Darnley</a></li>
             <li><a class = "githubLinks" href ="https://github.com/NXTGenforcer">Graham</a></li>
             <li><a class = "githubLinks" href ="https://github.com/jkohrt7">Jared</a></li>
@@ -316,10 +324,10 @@
           </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/flagpedia.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/materialize.js"></script>
     <script src = "assets/js/weather.js"></script>
     <script src = "assets/js/wikipedia.js"></script>
-    <script src="assets/js/autocomplete.js"></script>
 </body>
 </html>

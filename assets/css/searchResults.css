@@ -1,26 +1,38 @@
 .weatherSearch{
-    display: flex;
+    display: none;
     flex-direction: column;
     text-align: center;
     margin: 10rem 0 10rem 0;
-    height: 60rem;
     width: 35%;
     border: solid red;
+    border-image:  linear-gradient(to left,red, purple);;
+    border-image-slice: 25;
+    border-width: 5px;
   }
+
   .countryWiki{
-    height: 60rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     margin-left: 5rem;
-    border: solid green;
+    margin-top: 6em;
+    border: solid red;
+    border-image:  linear-gradient(to left,red, purple);;
+    border-image-slice: 25;
+    box-shadow: 20px 20px 20px rgb(2, 2, 29);
+    border-width: 7px;
     width: 58%;
     text-align: center;
+    letter-spacing: 1px;
+  }
+  .dropdownBtn{
+      margin: 1em;
   }
   .countryName{
-      border: solid blue;
-      margin: 1em;
-      padding: 1em;
+      margin: 0 .5em .5em .5em;
+      padding: .5em;
   }
   .countryInfo{
-      border: solid yellowgreen;
-      margin: 1em;
-      padding: 1em;
+      margin: .5em;
+      padding: .5em;
   }

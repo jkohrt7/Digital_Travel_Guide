@@ -8,7 +8,7 @@
 let getWeatherData = function(countryCode, cityName) {
     //use the city's name to create a GET http request for the geo API endpoint
     let requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q="
-        + countryCode + "," + cityName
+        + cityName + "," + countryCode + ","
         + "&appid=acdc16ce9b81fc931de962a6dfeeba4f" //api key
     
     //Use geo API endpoint to return the city coordinates
@@ -39,12 +39,27 @@ let getWeatherData = function(countryCode, cityName) {
         method: "GET",
         mode: "cors",
       }).then(function (weatherResponse) {
-        
         let dataPromise = weatherResponse.json();
-        return dataPromise;
-      });
+        return dataPromise
+      }).then(function(dataPromise){
+        console.log(dataPromise)
+        let iconEl = $(".weatherIcon");
+        let descriptionEl = $(".weatherDescription");
+        let tempEl = $(".weatherTemp");
+        let humidityEl = $(".weatherHumidity");
+        let cityIconVal = $("<img />", {
+          src:
+            "http://openweathermap.org/img/wn/" +
+            dataPromise.current.weather[0].icon +
+            "@4x.png",
+        });
+        iconEl.append(cityIconVal);
+        descriptionEl.text(dataPromise.current.weather[0].description);
+        tempEl.text(dataPromise.current.temp + "℉");
+        humidityEl.text(dataPromise.current.humidity +"%");
+      })
     }).catch((error) => {
-      console.log("Error: Problem with API call--invalid city name.");
+      alert(error + ": Please enter a valid city name");
       return error;
     });
-};
+}; 

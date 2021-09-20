@@ -46,15 +46,12 @@ function getWikiPageSummary(articleName) {
     })
 }
 
-//TODO: renders results of a wikipedia search to a flexbox
 function buildWikipediaElement (articleName) {
     getWikiPageSummary(articleName).then(function (response) {
         //create a <p> element with .innerText = response and append it to the page
         return response;
     })
         .then(function(data){
-        console.log(data)
         countryInfoEl.append("<p>" + data + "</p>")
     })
 }
-buildWikipediaElement();

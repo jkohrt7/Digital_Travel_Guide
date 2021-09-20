@@ -1,11 +1,12 @@
-$(".waves-effect").on("click", function(){
+$(".homepageBtn").on("click", function(){
 location.replace("searchResults.html");
 })
 
 document.addEventListener('DOMContentLoaded', function() {
     event.preventDefault();
     var elems = document.querySelector('.dropdown-trigger');
-    var options = {
+    var options ={
+        alignment: "center",
        constrainWidth: false,
        stopPropagation: false,
     }
@@ -15,10 +16,24 @@ document.addEventListener('DOMContentLoaded', function() {
   $(".dropdown-content").on("click","option",function(){
       event.preventDefault();
       countryInfoEl.empty();
-      var usrSelected = $(this).text();
+      $(".weatherSearch").css("display","flex");
+      let usrSelected = $(this).text();
       localStorage.setItem("Country",usrSelected);
       buildWikipediaElement();
       countryNameEl.text(usrSelected);
-      console.log(usrSelected);
-    //   buildWikipediaElement();
   })
+
+  $(".weatherBtn").on("click",function(event){
+      event.preventDefault();
+      let cityName = $(".validate").val().trim();
+      let countryCode = localStorage.getItem("Country");
+      if (!cityName){
+          alert("Please enter a city name")
+          return;
+      }
+      let nameEl = $(".weatherName");
+         getWeatherData(countryCode,cityName);
+         $(".weatherIcon").empty();
+         $(".weatherName").text(cityName);
+         
+      })

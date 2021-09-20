@@ -1,10 +1,17 @@
-.waves-effect{
+.homepageBtn{
     position: absolute;
     top: 50%;
 }
+.weatherBtn{
+    float: right;
+}
 
 .dropdown-trigger{
-    margin: auto;
+    height: 4em;
+    width: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .dropdown-content{
     height: 30rem;
