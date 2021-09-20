@@ -1,3 +1,14 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container for search info */
+.country-form {
+  display: flex;
+  flex-grow: 1;
+  border: solid red 3px;
+}
 .weatherSearch{
     display: none;
     flex-direction: column;

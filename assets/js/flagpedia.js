@@ -1,13 +1,20 @@
 //Gets an image url to a flag using a country code.
 //API is hosted by flagpedia.net
-let countryName = localStorage.getItem("Country")
-
-function getFlagImage(countryName) {
+function renderFlag(countryName) {
     getCountryCode(countryName).then(function(code) {
-        let url = "https://flagcdn.com/w640/"
-        + code;
-        + ".png"
-         return url;
+        console.log(typeof(code))
+        let url = "https://flagcdn.com/h60/"
+        + code.trim()
+        + ".png";
+        
+        console.log(url)
+
+        let imgContainer = document.querySelector("#country-flag")
+        let imgNode = document.createElement("IMG");
+        imgNode.src = url;
+        imgContainer.appendChild(imgNode);
+
+        return;
     })
 }
 
@@ -28,19 +35,6 @@ function getCountryCode(countryName) {
                 return keyArr[i]; 
             }
         }
-        return;
+        return "Eggs";
     })
 }
-
-//TODO
-//renders a flag img
-function renderFlag(countryName) {
-    getCountryCode().then(function(response){
-        return response
-    })
-    .then(getFlagImage(countryName))
-        //append to the correct box
-        // let countryFlagEl = $(".countryFlag")
-        // countryFlagEl.append()
-}
-renderFlag();
