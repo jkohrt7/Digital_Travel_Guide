@@ -24,7 +24,8 @@ function getWikiPromise(articleName){
 
 //returns a promise to the summary (a String) of a wikipedia page.
 function getWikiPageSummary(articleName) {
-    articleName = localStorage.getItem("Country");
+    //articleName = localStorage.getItem("Country");
+    console.log(articleName);
     let url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&origin=*&titles="
     + articleName.replace(" ", "_");
     return fetch(url, {
@@ -48,13 +49,35 @@ function getWikiPageSummary(articleName) {
 
 //TODO: renders results of a wikipedia search to a flexbox
 function buildWikipediaElement (articleName) {
-    getWikiPageSummary(articleName).then(function (response) {
-        //create a <p> element with .innerText = response and append it to the page
-        return response;
+    console.log(articleName)
+    getWikiPageSummary(articleName).then(function (responseString) {
+        //Limit the response length.
+        if (responseString.length > 500) {
+            responseString = responseString.slice(0, 500) + "...";
+        }
+       
+        //make the title the country
+        let title = document.querySelector("#country-title");
+        titleNode = document.createTextNode(articleName);
+        title.appendChild(titleNode);
+
+        //make the body the text
+        let wikiSummary = document.querySelector("#country-wiki-text")
+        let summaryNode = document.createElement("P");
+        let summaryTextNode = document.createTextNode(responseString);
+        summaryNode.appendChild(summaryTextNode);
+        wikiSummary.appendChild(summaryNode);
+
+        //add a read more url (TODO)
+        let wikiURL = "https://en.wikipedia.org/wiki/" + articleName
+        let linkNode = document.createElement("a");
+        linkNode.href = wikiURL;
+        let linkText = document.createTextNode("[Learn More]");
+
+        linkNode.appendChild(linkText);
+        wikiSummary.appendChild(linkNode);
+
+        return;
     })
-        .then(function(data){
-        console.log(data)
-        countryInfoEl.append("<p>" + data + "</p>")
-    })
+
 }
-buildWikipediaElement();

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Search</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+     <!--Let browser know website is optimized for mobile-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+
+<!--Materialize in a nutshell-->
+<!--Always place things in materialize class="containers" so they are responsive and have padding. Use id, not class, to grab these.-->
+<!--Define a row with class="row" and a column with class="col". Adding numbers determines what fraction/12 they will occupy; s means only on small screens, l on large..-->
+<!--Adding colors into the name of the class changes the background color; adding text-color to the class changes text color.-->
+<!--Custom CSS should be used sparingly to enhance things--the page should work/look perfectly fine with html alone.-->
+<body>
+    <!--Header with link back to home page and github-->
+    <header>
+        <nav>
+            <div class="nav-bg"></div>
+            <ul>
+              <li><a href="./index.html">Home</option></a></li>
+              <li><a target ="_blank" href="https://github.com/jkohrt7/Team_4_Project">About</option></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Country, City and State Inputs-->
+    <section class = "section container" id = "country-city-input">
+        <div class = 'row'>
+            <h5>Select a location</h5>
+        </div>
+        <div class = "row" >
+            <div class = "input-field col s6">
+                <input id="country-name" type="text" class="autocomplete">
+                <label for="country-name">Country</label>
+            </div>
+            <div class = "input-field col s6">
+                <input id="city-name" type="text" class="validate">
+                <label for="city-name">City</label>
+            </div>
+            <div class="input-field col s6">
+                <input disabled id="state-name" type="text" class="validate">
+                <label for="disabled">State</label>
+            </div>
+        </div>
+        <div class = "btn indigo waves-effect waves-light" id = "search-submit">SUBMIT</div>
+    </section>
+    
+    <!--API Feedback-->
+    <section class = "section container" id = "api-feedback-container"> <!--Add hide-->
+        <div class = "row">
+            <!--Weather Info-->
+            <div class="col grey lighten-3 z-depth-3 s6">
+                <div class="col s12">
+                    <h4 class = "center-align" id = "weather-date">
+                        Weather
+                    </h4>
+                </div>
+                <div class="col s12 " id = "weather-text">
+                    Weather info
+                </div>
+            </div>
+
+            <!--Wikipedia Info-->
+            <div class = "col grey lighten-3 z-depth-3 s6">
+                <div class="col s12">
+                    <h4 class = "center-align" id = "country-title">
+                        Country Name
+                    </h4>
+                </div>
+                <div class="col s12" id = "country-flag">
+                    Flag here
+                </div>
+                <div class="col s12" id = "country-wiki-text">
+                    Wiki Info Here
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src = "assets/js/flagpedia.js"></script>
+    <script src = "assets/js/weather.js"></script>
+    <script src = "assets/js/wikipedia.js"></script>
+    <script src ="assets/js/forms.js"></script>
+    <script src = "assets/js/main.js"></script>
+</body>
+</html>
