@@ -5,8 +5,31 @@
 
 //Sets up necessary listeners
 const init = function() {
+    //Determines if state input needs to be enabled
+    window.addEventListener("click", enableState);
+
+    //Executes a search on button click
     let searchButton = document.querySelector("#search-submit"); 
     searchButton.addEventListener("click",submitSearch); //Clicking it submits the search
+    
+}
+
+const enableState = function(event){
+    let stateInput  = document.querySelector("#state-name");
+    let countryInput = document.querySelector("#country-name")
+    if (countryInput.value === "United States") {
+        document.querySelector("#state-name").removeAttribute("disabled");
+    }
+    else {
+        if(stateInput.hasAttribute("disabled")) {
+            return;
+        }
+        else {
+            stateInput.setAttribute("disabled", "");
+            stateInput.value = "";
+            return;
+        }
+    }
 }
 
 //Contains functions that are fired when a search is initiated
