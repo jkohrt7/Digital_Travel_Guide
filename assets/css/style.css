@@ -1,13 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vw;
-  background: black;
+  height: 210vh;
+  background: rgb(34,35,48);
+  background-size: 100%;
+  background-repeat: no-repeat;
   color: white;
 }
 main{
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 nav {
@@ -121,8 +124,8 @@ h1 {
   width: 100%;
   height: 100vh;
   background: rgb(50, 50, 50);
-  background: 	linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-  url(https://doninmass.files.wordpress.com/2013/04/walking-in-rain-painting-wallpaper-hd.jpg) no-repeat 50% 50% fixed;
+  background: 	linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,.3)),
+  url(https://i.pinimg.com/originals/90/58/a5/9058a5ec013afe7563cb32b507a5d586.jpg) no-repeat 50% 50% fixed;
   background-size: 130%;
   overflow: hidden;
 }

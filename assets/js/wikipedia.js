@@ -47,7 +47,6 @@ function getWikiPageSummary(articleName) {
     })
 }
 
-//TODO: renders results of a wikipedia search to a flexbox
 function buildWikipediaElement (articleName) {
     console.log(articleName)
     getWikiPageSummary(articleName).then(function (responseString) {

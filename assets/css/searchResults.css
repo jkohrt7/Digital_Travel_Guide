@@ -9,29 +9,32 @@ main {
   flex-grow: 1;
   border: solid red 3px;
 }
-.weatherSearch{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 10rem 0 10rem 0;
-    height: 60rem;
-    width: 35%;
+
+  #country-city-input{
+    background-color: rgb(64, 64, 85);
     border: solid red;
+    border-image:  linear-gradient(to left,red, purple);
+    border-image-slice: 25;
+    border-width: 5px;
   }
-  .countryWiki{
-    height: 60rem;
-    margin-left: 5rem;
-    border: solid green;
-    width: 58%;
-    text-align: center;
+  #country-city-input h5{
+    border: solid black;
+    background-color:rgb(4, 3, 17);
+    width: 25%;
+    margin: auto;
+    box-shadow: 10px 10px 10px rgb(22, 7, 65);
   }
-  .countryName{
-      border: solid blue;
-      margin: 1em;
-      padding: 1em;
+  #api-feedback-div{
+    display: flex;
+    justify-content: space-evenly;
   }
-  .countryInfo{
-      border: solid yellowgreen;
-      margin: 1em;
-      padding: 1em;
+  .countryWikiInfo,
+  .weatherInfo{
+    border: solid red;
+    border-image:  linear-gradient(to left,red, purple);
+    border-image-slice: 25;
+    border-width: 5px;
+    margin-right: 4em;
+    background-color: rgb(64, 64, 85);
+    box-shadow: 10px 10px 10px rgb(2, 2, 29);
   }

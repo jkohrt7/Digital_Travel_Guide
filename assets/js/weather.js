@@ -52,7 +52,7 @@ let getWeatherData = function(countryCode, cityName, stateCode) {
         return dataPromise;
       });
     }).catch((error) => {
-      console.log("Error: Problem with API call--invalid city name.");
+      alert(error + ": Please enter a valid city name");
       return error;
     });
 };
