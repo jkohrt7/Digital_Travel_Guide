@@ -16,7 +16,24 @@
   }
 
   #country-city-input h5{
-    color: white;
+    border: solid black;
+    background-color:rgb(4, 3, 17);
+    width: 25%;
+    margin: auto;
+    box-shadow: 10px 10px 10px rgb(22, 7, 65);
+  }
+  #country-title,
+  #weather-date{
+    width: 50%;
+    margin-left: 3.5em;
+    border: solid black;
+    background-color:rgb(4, 3, 17);
+    box-shadow: 5px 5px 5px rgb(22, 7, 65);
+  }
+  #api-feedback-div{
+    display: flex;
+    justify-content: space-evenly;
+
   }
 
   .countryWikiInfo,
