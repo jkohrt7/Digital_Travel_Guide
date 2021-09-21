@@ -29,21 +29,21 @@ const processSearch = async function() {
 
     //Populate weather summary flexbox
     try {
-        const weatherResultArray = await getWeatherData(getCountryCode(country),city); //Needs a bit of work. What weather data are we interested in?
-        if(weatherResultArray.length > 0) {
-            buildWeatherElement(); //TODO: creates and appends the flexbox with weather elements for a country/city.
-        }
-    } catch (error) {
+        await buildWeatherElement(country, city, state); //TODO: creates and appends the flexbox with weather elements for a country/city.
+    }
+    catch (error) {
         console.log("That isn't a valid city for OpenWeather.");
         return;
     }
 
-
-    const wikipediaResultArray = await getWikiPageSummary(country); //TODO: gets an array of wikipedia summary results
-    if(wikipediaResultArray.length > 0) {
+    try{
         await buildWikipediaElement(country); //TODO: creates and appends the flexbox with wiki image and text for a country/city.
         await renderFlag(country);
     }
+    catch {
+        
+    }
+   
 
     
 }
