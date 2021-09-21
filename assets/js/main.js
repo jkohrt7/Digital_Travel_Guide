@@ -35,6 +35,7 @@ const enableState = function(event){
 //Contains functions that are fired when a search is initiated
 const submitSearch = function () {
     console.log("clicked");
+    document.querySelector("#api-feedback-container").setAttribute("class", "section container");
     clearInformation(); //Finished--forms.js
     processSearch(); //TODO: uses the search to perform API calls and populate the screen
 }
