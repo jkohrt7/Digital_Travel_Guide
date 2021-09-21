@@ -8,10 +8,11 @@
   #country-city-input{
     background-color: rgb(64, 64, 85);
     border: solid red;
-    margin-top: 10%;
+    margin-top: 20px;
     border-image:  linear-gradient(to left,red, purple);
     border-image-slice: 25;
     border-width: 5px;
+    box-shadow: 10px 10px 10px rgb(2, 2, 29);
   }
 
   #country-city-input h5{
@@ -47,4 +48,5 @@
     font-size: larger;
     font-weight: bold;
     text-align: center;
+    margin-top: 30%;
   }
