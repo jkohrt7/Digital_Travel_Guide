@@ -9,41 +9,32 @@ main {
   flex-grow: 1;
   border: solid red 3px;
 }
-.weatherSearch{
-    display: none;
-    flex-direction: column;
-    text-align: center;
-    margin: 10rem 0 10rem 0;
-    width: 35%;
+
+  #country-city-input{
+    background-color: rgb(64, 64, 85);
     border: solid red;
-    border-image:  linear-gradient(to left,red, purple);;
+    border-image:  linear-gradient(to left,red, purple);
     border-image-slice: 25;
     border-width: 5px;
   }
-
-  .countryWiki{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    margin-left: 5rem;
-    margin-top: 6em;
+  #country-city-input h5{
+    border: solid black;
+    background-color:rgb(4, 3, 17);
+    width: 25%;
+    margin: auto;
+    box-shadow: 10px 10px 10px rgb(22, 7, 65);
+  }
+  #api-feedback-div{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .countryWikiInfo,
+  .weatherInfo{
     border: solid red;
-    border-image:  linear-gradient(to left,red, purple);;
+    border-image:  linear-gradient(to left,red, purple);
     border-image-slice: 25;
-    box-shadow: 20px 20px 20px rgb(2, 2, 29);
-    border-width: 7px;
-    width: 58%;
-    text-align: center;
-    letter-spacing: 1px;
-  }
-  .dropdownBtn{
-      margin: 1em;
-  }
-  .countryName{
-      margin: 0 .5em .5em .5em;
-      padding: .5em;
-  }
-  .countryInfo{
-      margin: .5em;
-      padding: .5em;
+    border-width: 5px;
+    margin-right: 4em;
+    background-color: rgb(64, 64, 85);
+    box-shadow: 10px 10px 10px rgb(2, 2, 29);
   }

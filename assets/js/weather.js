@@ -47,25 +47,10 @@ let getWeatherData = function(countryCode, cityName, stateCode) {
         method: "GET",
         mode: "cors",
       }).then(function (weatherResponse) {
+        
         let dataPromise = weatherResponse.json();
-        return dataPromise
-      }).then(function(dataPromise){
-        console.log(dataPromise)
-        let iconEl = $(".weatherIcon");
-        let descriptionEl = $(".weatherDescription");
-        let tempEl = $(".weatherTemp");
-        let humidityEl = $(".weatherHumidity");
-        let cityIconVal = $("<img />", {
-          src:
-            "http://openweathermap.org/img/wn/" +
-            dataPromise.current.weather[0].icon +
-            "@4x.png",
-        });
-        iconEl.append(cityIconVal);
-        descriptionEl.text(dataPromise.current.weather[0].description);
-        tempEl.text(dataPromise.current.temp + "℉");
-        humidityEl.text(dataPromise.current.humidity +"%");
-      })
+        return dataPromise;
+      });
     }).catch((error) => {
       alert(error + ": Please enter a valid city name");
       return error;
