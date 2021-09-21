@@ -1,5 +1,5 @@
 $(".homepageBtn").on("click", function(){
-location.replace("searchResults.html");
+location.replace("search.html");
 })
 
 document.addEventListener('DOMContentLoaded', function() {
