@@ -24,6 +24,12 @@ main {
     margin: auto;
     box-shadow: 10px 10px 10px rgb(22, 7, 65);
   }
+  #country-title,
+  #weather-date{
+    border: solid black;
+    background-color:rgb(4, 3, 17);
+    box-shadow: 10px 10px 10px rgb(22, 7, 65);
+  }
   #api-feedback-div{
     display: flex;
     justify-content: space-evenly;
