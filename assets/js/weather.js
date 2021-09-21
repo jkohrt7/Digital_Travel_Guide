@@ -19,6 +19,8 @@ let getWeatherData = function(countryCode, cityName, stateCode) {
       + "&appid=acdc16ce9b81fc931de962a6dfeeba4f" //api key
     }
     
+    console.log(requestUrl);
+    
     //Use geo API endpoint to return the city coordinates
     return fetch(requestUrl, {
         method: "GET",
@@ -52,7 +54,7 @@ let getWeatherData = function(countryCode, cityName, stateCode) {
         return dataPromise;
       });
     }).catch((error) => {
-      alert(error + ": Please enter a valid city name");
+      console.log("Error: Problem with API call--invalid city name.");
       return error;
     });
 };

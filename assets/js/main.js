@@ -38,6 +38,7 @@ const submitSearch = function () {
     document.querySelector("#api-feedback-container").setAttribute("class", "section container");
     clearInformation(); //Finished--forms.js
     processSearch(); //TODO: uses the search to perform API calls and populate the screen
+    //addHistoryToStorage(); //add valid country searches to localStorage
 }
 
 //Uses the search info to run API queries and put that info on the site.
@@ -53,10 +54,11 @@ const processSearch = async function() {
 
     //Populate weather summary flexbox
     try {
-        await buildWeatherElement(country, city, state); //TODO: creates and appends the flexbox with weather elements for a country/city.
+        let countryCode = await getCountryCode(country);
+        await buildWeatherElement(countryCode, city, getStateCode(state)); //TODO: creates and appends the flexbox with weather elements for a country/city.
     }
     catch (error) {
-        console.log("That isn't a valid city for OpenWeather.");
+        console.log(error);
         return;
     }
 

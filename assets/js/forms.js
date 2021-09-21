@@ -1,3 +1,8 @@
+const small = document.querySelector('.carousel');
+M.Carousel.init(small,{
+  
+})
+
 var countries = {
   "Andorra":null,
   "United Arab Emirates":null,
