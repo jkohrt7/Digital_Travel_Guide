@@ -11,6 +11,7 @@ const init = function() {
     //Executes a search on button click
     let searchButton = document.querySelector("#search-submit"); 
     searchButton.addEventListener("click",submitSearch); //Clicking it submits the search
+    renderFlagCarousel();
     
 }
 
@@ -38,7 +39,7 @@ const submitSearch = function () {
     document.querySelector("#api-feedback-container").setAttribute("class", "section container");
     clearInformation(); //Finished--forms.js
     processSearch(); //TODO: uses the search to perform API calls and populate the screen
-    //addHistoryToStorage(); //add valid country searches to localStorage
+    renderFlagCarousel();
 }
 
 //Uses the search info to run API queries and put that info on the site.
@@ -46,7 +47,7 @@ const processSearch = async function() {
     let country= document.querySelector("#country-name").value;
     let city = document.querySelector("#city-name").value;
     let state = document.querySelector("#state-name").value;
-  
+
     if(country === "") {
         console.log("Required selection is blank");
         return;
@@ -65,13 +66,12 @@ const processSearch = async function() {
     try{
         await buildWikipediaElement(country); //TODO: creates and appends the flexbox with wiki image and text for a country/city.
         await renderFlag(country);
-    }
-    catch {
+        await addFlagToLocalStorage(country,city); //add flag to localstorage
         
     }
-   
-
-    
+    catch (error){
+        console.log(error);
+    }    
 }
 
 init();
