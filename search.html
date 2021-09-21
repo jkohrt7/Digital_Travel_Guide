@@ -13,7 +13,7 @@
      <!-- Compiled and minified CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
      <link rel="stylesheet" href="assets/css/searchResults.css"/>
-     <link rel="stylesheet" href="assets/css/style.css"/>
+     
     
      <!--Let browser know website is optimized for mobile-->
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -25,7 +25,7 @@
 <!--Define a row with class="row" and a column with class="col". Adding numbers determines what fraction/12 they will occupy; s means only on small screens, l on large..-->
 <!--Adding colors into the name of the class changes the background color; adding text-color to the class changes text color.-->
 <!--Custom CSS should be used sparingly to enhance things--the page should work/look perfectly fine with html alone.-->
-<body>
+<body class = "blue-grey #263238 blue-grey darken-4">
     <!--Header with link back to home page and github-->
     <header>
         <nav>
@@ -38,7 +38,7 @@
     </header>
 
     <!--Country, City and State Inputs-->
-    <section class = "section container" id = "country-city-input">
+    <section class = "section container center-align s12 m12 l12 " id = "country-city-input">
         <div class = 'row'>
             <h5 class="center">Select a location</h5>
         </div>
@@ -56,27 +56,30 @@
                 <label for="disabled">State</label>
             </div>
         </div>
-        <div class = "btn indigo waves-effect waves-light" id = "search-submit">SUBMIT</div>
+        <div class = "btn red waves-effect waves-light" id = "search-submit">Search</div>
     </section>
     
     <!--API Feedback-->
-    <section class = "section container" id = "api-feedback-container"> <!--Add hide-->
+    <section class = "hide section container" id = "api-feedback-container"> <!--Add hide-->
         <div class = "row" id="api-feedback-div">
             <!--Weather Info-->
-            <div class="col lighten-3 s5 weatherInfo">
+            <div class="col lighten-3 s12 m5 l5 weatherInfo">
                 <div class="col s12">
-                    <h4 class = "center-align" id = "weather-date">
+                    <h4 class = "center-align white-text" id = "weather-date">
                         Weather
                     </h4>
                 </div>
-                <div class="col s6 " id = "weather-text">
+
+                <div class="col s6 white-text" id = "weather-text">
+                    Weather info
                 </div>
-                <div class="col s6 " id = "weather-icon">
+                <div class="col s6 white-text" id = "weather-icon">
+                    Weather ICON
                 </div>
             </div>
 
             <!--Wikipedia Info-->
-            <div class = "col lighten-3 s5 countryWikiInfo">
+            <div class = "col lighten-3 s12 m6 l6 countryWikiInfo">
                 <div class="col s12">
                     <h4 class = "center-align" id = "country-title">
                         Country Name
@@ -91,13 +94,31 @@
     </section>
     <footer>
         <ul class ="footerList">
-          <li><i class="fab fa-github fa-3x"></i></li>
-        <li><a class = "githubLinks" href ="https://github.com/dcorbiniii">Darnley</option></a></li>
-        <li><a class = "githubLinks" href ="https://github.com/NXTGenforcer">Graham</option></a></li>
-        <li><a class = "githubLinks" href ="https://github.com/jkohrt7">Jared</option></a></li>
-        <li><a class = "githubLinks" href ="https://github.com/mandy2324">Mandy</option></a></li>
-        <li><a class = "githubLinks" href ="https://github.com/McTastic">Sean</option></a></li>
+          
+
       </ul>
+      </footer>
+
+      <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col  s12">
+              <ul>
+                <li><i class="fab fa-github fa-3x col s2"></i></li>
+                <li><a class = "col s12 m2 white-text" href ="https://github.com/dcorbiniii">Darnley</option></a></li>
+                <li><a class = "col s3 m2 white-text" href ="https://github.com/NXTGenforcer">Graham</option></a></li>
+                <li><a class = "col s3 m2 white-text" href ="https://github.com/jkohrt7">Jared</option></a></li>
+                <li><a class = "col s3 m2 white-text" href ="https://github.com/mandy2324">Mandy</option></a></li>
+                <li><a class = "col s3 m2 white-text" href ="https://github.com/McTastic">Sean</option></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          <a class="grey-text text-lighten-4 right" href="#!"></a>
+          </div>
+        </div>
       </footer>
 
 
