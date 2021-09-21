@@ -70,4 +70,81 @@ let getWeatherData = function(countryCode, cityName, stateCode) {
       alert(error + ": Please enter a valid city name");
       return error;
     });
-}; 
+};
+
+//Adds curr weather data from a weather response to the daily weather element
+function buildWeatherElement(country, city, state) {
+  let dataContainer = document.querySelector("#weather-text");
+  let imageContainer = document.querySelector("#weather-icon")
+
+  //add data to container
+  getWeatherData(country, city, state).then(function(response){
+      if(response instanceof Error) {
+          console.log("save me from error hell")
+          return;
+      }
+
+      //Update HTML
+      dataContainer.innerHTML = ""; 
+      imageContainer.innerHTML = "";
+      document.querySelector("#weather-date").textContent = city;
+
+      //set values from response
+      let temp = response.current.temp;
+      let wind = response.current.wind_speed;
+      let humidity = response.current.humidity;
+      let icon = response.current.weather[0].icon;
+      let uvi = response.current.uvi;
+
+      //append temperature
+      let node = document.createElement("H2");
+      let textnode = document.createTextNode(temp + " °F");
+      node.appendChild(textnode);
+      dataContainer.appendChild(node);
+
+      //append Wind
+      node = document.createElement("P");
+      textnode = document.createTextNode("Wind: " + wind +" MPH");
+      node.appendChild(textnode);
+      dataContainer.appendChild(node);
+
+      //append Humidity
+      node = document.createElement("P");
+      textnode = document.createTextNode("Humidity: " + humidity + "%");
+      node.appendChild(textnode);
+      dataContainer.appendChild(node);
+
+      //append UVI
+      node = document.createElement("P");
+
+      //Need a span for the title...
+      let titleSpanNode = document.createElement("SPAN");
+      textnode = document.createTextNode("UV Index: ");
+      titleSpanNode.appendChild(textnode);
+      node.appendChild(titleSpanNode);
+      
+      //...and for the dynamically colored UV Index
+      let colorSpanNode = document.createElement("SPAN");
+      if(uvi <= 4) {
+          colorSpanNode.style = "background-color: green; color: white; border-radius: 3px; padding: 2px"
+      } 
+      else if (uvi <=7 ) {
+          colorSpanNode.style = "background-color: orange; color: white; border-radius: 3px; padding: 2px"
+      }
+      else {
+          colorSpanNode.style = "background-color: red; color: white; border-radius: 3px; padding: 2px"
+      }
+      textnode = document.createTextNode(uvi);
+      colorSpanNode.appendChild(textnode);
+      node.appendChild(colorSpanNode);
+      
+      dataContainer.appendChild(node);
+
+      //append Icon
+      node = document.createElement("IMG");
+      node.src = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+      imageContainer.appendChild(node);
+      
+  });
+
+}
