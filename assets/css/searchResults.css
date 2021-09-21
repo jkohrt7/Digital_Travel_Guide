@@ -1,40 +1,52 @@
-main {
-  display: flex;
-  flex-direction: column;
-}
+
 
 /* Container for search info */
 .country-form {
-  display: flex;
-  flex-grow: 1;
   border: solid red 3px;
 }
 
   #country-city-input{
     background-color: rgb(64, 64, 85);
     border: solid red;
+    margin-top: 20px;
     border-image:  linear-gradient(to left,red, purple);
     border-image-slice: 25;
     border-width: 5px;
+    box-shadow: 10px 10px 10px rgb(2, 2, 29);
   }
+
   #country-city-input h5{
-    border: solid black;
-    background-color:rgb(4, 3, 17);
-    width: 25%;
-    margin: auto;
-    box-shadow: 10px 10px 10px rgb(22, 7, 65);
+    color: white;
   }
-  #api-feedback-div{
-    display: flex;
-    justify-content: space-evenly;
-  }
+
   .countryWikiInfo,
   .weatherInfo{
     border: solid red;
     border-image:  linear-gradient(to left,red, purple);
     border-image-slice: 25;
-    border-width: 5px;
-    margin-right: 4em;
-    background-color: rgb(64, 64, 85);
     box-shadow: 10px 10px 10px rgb(2, 2, 29);
+    color: white;
+    margin-top: 5%;
+  }
+
+  .weatherInfo {
+    margin-right: 8%;
+    
+  }
+
+  #country-flag{
+    display: flex;
+    justify-content: center;
+  }
+
+  nav {
+    background-color: rgb(64, 64, 85)
+  }
+
+  .page-footer {
+    background-color: rgb(64, 64, 85);
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30%;
   }
