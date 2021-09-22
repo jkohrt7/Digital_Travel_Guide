@@ -37,12 +37,12 @@ The following images shows the web application's appearance and functionality:
  This travel guide app includes a GET STARTED option, a list of countries,  current-day forecast, wekipedia information of the country and image of its flag.
 
 
-![This travel guide app includes a GET STARTED option, a list of countries,  current-day forecast, wekipedia information of the country and image of its flag.](./assets/images/home-page.PNG)
+![This travel guide app includes a GET STARTED option, a list of countries,  current-day forecast, wekipedia information of the country and image of its flag.](https://github.com/jkohrt7/Team_4_Project/blob/main/assets/images/_F__Class%2520Bootcamp_Project1_Team_4_Project_index.html%20(1).png?raw=true)
 
 
-![results page](./assets/images/secondary-page.PNG)
+![results page](https://github.com/jkohrt7/Team_4_Project/blob/main/assets/images/_F__Class%2520Bootcamp_Project1_Team_4_Project_search.html.png?raw=true)
 
-![demo](./assets/images/demo.PNG)
+![demo](https://github.com/jkohrt7/Team_4_Project/blob/main/assets/images/_F__Class%2520Bootcamp_Project1_Team_4_Project_search.html%20(1).png?raw=true)
 
 ##  Deployed wesite link
 
